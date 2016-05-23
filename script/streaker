@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+# script/streaker: Get the streak details for a GitHub user, where a streak is
+#                  defined as the total number of consecutive days that the user
+#                  has no GitHub contributions.
+#
+# Usage: script/streaker <username>
+#
+# Example: script/streaker torvalds
+
+require_relative "../lib/streaker"
+
+username = ARGV.shift or abort "Usage: script/streaker <username>"
+
+puts "===> Getting streak details for '#{username}' ...\n\n"
+
+begin
+  result = Streaker.get(username)
+  puts "Longest streak by #{username}: #{result[:longest_streak]}\n"
+  puts "Current streak by #{username}: #{result[:current_streak]}\n\n"
+  puts "Where a streak is defined as:\n\n"
+  puts "\"The number of consecutive days with no contributions\""
+
+rescue Exception => e
+  puts e
+end
+
+# vim: set ft=ruby:
