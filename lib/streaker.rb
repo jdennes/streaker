@@ -38,10 +38,15 @@ module Streaker
   def self.calculate_streaks(contributions)
     streaks = []
     days = 0
-    contributions.each do |count|
-      if count == 0
-        # If the contribution count is 0, increment days to start a streak
+    contributions.each_with_index do |contrib, index|
+      if contrib == 0
+        # If the contribution count is 0, increment days of streak
         days += 1
+        if index == contributions.size - 1
+          # Check whether we need to add a streak if this is
+          # the last contribution
+          streaks << days
+        end
       else
         # Otherwise, the streak is over (if it started)
         streaks << days if days > 0
