@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# script/server: Run the application locally.
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+bundle exec ruby app.rb -p 5000

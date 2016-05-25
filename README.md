@@ -4,22 +4,31 @@ No more [streaks](https://github.com/blog/2173-more-contributions-on-your-profil
 
 > code streaks are no longer featured on your contribution graph
 
-Streaker calculates streaks for you again.
+Streaker calculates streaks for you again, where a _streak_ is defined as:
 
-Where a _streak_ is defined as:
+> "The number of consecutive days with _no_ contributions"
 
-> "The number of consecutive days with no contributions"
+:stuck_out_tongue:
+
+## Usage:
+
+### From the command line:
 
 ```
-$ script/streaker torvalds      
-===> Getting streak details for 'torvalds' ...
+$ script/bootstrap
+$ script/streaker torvalds
+===> Getting streaks for 'torvalds' ...
 
-Longest streak by torvalds: 2
-Current streak by torvalds: 0
+Streaks for @torvalds:
 
-Where a streak is defined as:
+Longest streak: 2
+Current streak: 1
+
+Streaker defines a streak as:
 
 "The number of consecutive days with no contributions"
 ```
 
-:stuck_out_tongue:
+### [App](http://streaker.jdenn.es/):
+
+![app](https://cloud.githubusercontent.com/assets/65057/15539525/5346d774-2283-11e6-9b61-15f182b9cfc5.png)

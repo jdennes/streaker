@@ -20,7 +20,7 @@ module Streaker
       .flatten
       .map(&:to_i)
     if contributions.empty?
-      raise "No contributions data found for '#{username}'"
+      raise "No contributions data found for '#{username}'."
     end
 
     calculate_streaks(contributions)

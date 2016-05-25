@@ -12,13 +12,14 @@ require_relative "../lib/streaker"
 
 username = ARGV.shift or abort "Usage: script/streaker <username>"
 
-puts "===> Getting streak details for '#{username}' ...\n\n"
+puts "===> Getting streaks for '#{username}' ...\n\n"
 
 begin
   result = Streaker.get(username)
-  puts "Longest streak by #{username}: #{result[:longest_streak]}\n"
-  puts "Current streak by #{username}: #{result[:current_streak]}\n\n"
-  puts "Where a streak is defined as:\n\n"
+  puts "Streaks for @#{username}:\n\n"
+  puts "Longest streak: #{result[:longest_streak]}\n"
+  puts "Current streak: #{result[:current_streak]}\n\n"
+  puts "Streaker defines a streak as:\n\n"
   puts "\"The number of consecutive days with no contributions\""
 
 rescue Exception => e
