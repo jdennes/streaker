@@ -29,6 +29,6 @@ Streaker defines a streak as:
 "The number of consecutive days with no contributions"
 ```
 
-### [App](http://streaker.jdenn.es/):
+### From the app: http://streaker.jdenn.es
 
 ![app](https://cloud.githubusercontent.com/assets/65057/15539525/5346d774-2283-11e6-9b61-15f182b9cfc5.png)
