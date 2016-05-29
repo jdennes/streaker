@@ -4,8 +4,8 @@ require_relative "../lib/streaker"
 class TestStreaker < Minitest::Test
 
   def test_that_calculate_streaks_works
-    contributions = [ 2, 3, 0, 0, 5, 6, 1, 0 ]
-    expected_streaks = { :longest_streak => 2, :current_streak => 1 }
+    contributions = [ 2, 3, 0, 0, 5, 6, 0, 0, 0, 1, 3, 4, 0, 0 ]
+    expected_streaks = { :longest_streak => 3, :current_streak => 2 }
     streaks = Streaker.calculate_streaks(contributions)
     assert_equal expected_streaks, streaks
   end
