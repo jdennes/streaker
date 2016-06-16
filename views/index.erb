@@ -41,6 +41,9 @@
       <% if @result %>
         <div class="panel panel-default">
           <div class="panel-body">
+            <div class="pull-right">
+              <a href="/<%= @username %>"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
+            </div>
             <h4>
               Streaks for <a href="https://github.com/<%= @username %>" target="_blank">@<%= @username %></a>:
             </h4>
