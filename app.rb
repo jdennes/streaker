@@ -8,17 +8,22 @@ helpers do
   end
 end
 
-get "/" do
+def get_streaks(username)
+  return unless username
+  begin
+    @username = username
+    @result = Streaker.get(username)
+  rescue Exception => e
+    @error = e
+  end
+end
+
+get "/?:username?" do
+  get_streaks(params[:username])
   erb :index, :layout => false
 end
 
 post "/" do
-  begin
-    @username = params[:username]
-    @result = Streaker.get(params[:username])
-  rescue Exception => e
-    @error = e
-  end
-
+  get_streaks(params[:username])
   erb :index, :layout => false
 end
