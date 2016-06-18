@@ -25,7 +25,7 @@
       <% end %>
 
       <p>
-        <form method="post">
+        <form method="post" action="/">
           <div class="input-group">
             <input class="form-control" id= "username" name="username"
               value="<%= @username %>"
@@ -41,6 +41,9 @@
       <% if @result %>
         <div class="panel panel-default">
           <div class="panel-body">
+            <div class="pull-right">
+              <a href="/<%= @username %>"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
+            </div>
             <h4>
               Streaks for <a href="https://github.com/<%= @username %>" target="_blank">@<%= @username %></a>:
             </h4>
