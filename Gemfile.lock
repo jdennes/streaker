@@ -24,5 +24,8 @@ DEPENDENCIES
   minitest
   sinatra
 
+RUBY VERSION
+   ruby 2.4.5p335
+
 BUNDLED WITH
    1.17.1
