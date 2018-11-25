@@ -1,8 +1,10 @@
 source "https://rubygems.org"
 
-gem "faraday", "0.9.2"
-gem "sinatra", "1.4.7"
+ruby "2.4.5"
+
+gem "faraday"
+gem "sinatra"
 
 group :test do
-  gem "minitest", "5.9.0"
+  gem "minitest"
 end
